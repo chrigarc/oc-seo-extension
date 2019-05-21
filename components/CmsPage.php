@@ -26,6 +26,9 @@ class CmsPage extends ComponentBase
     public $ogFbAppId;
     public $ogLocale;
     public $ogImage;
+    public $ogType;
+    public $ogOthersPage;
+    public $ogOthers;
 
 
     public function componentDetails()
@@ -66,6 +69,10 @@ class CmsPage extends ComponentBase
                 $this->ogUrl = empty($this->page->canonical_url) ? Request::url() : $this->page->canonical_url ;
                 $this->ogSiteName = $settings->og_sitename;
                 $this->ogFbAppId = $settings->og_fb_appid;
+                $this->ogImage = empty($page['og_image'])? $settings->og_image: $page['og_image'];
+                $this->ogType = empty($page['og_type'])? $settings->og_type: $page['og_type'];
+                $this->ogOthers = $settings->seo_other;
+                $this->ogOthersPage = $page->seo_other;
             }
 
         }

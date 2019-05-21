@@ -209,6 +209,25 @@ class Plugin extends PluginBase
                             'default' => 'follow',
                             'span'    => 'right'
                         ],
+                        'og_image' => [
+                            'label'   => 'anandpatel.seoextension::lang.editor.og_image',
+                            'type'    => 'mediafinder',
+                            'mode'    => 'image',
+                            'tab'     => 'SEO',
+                            'span'    => 'left'
+                        ],
+                        'og_type' => [
+                            'label'   => 'anandpatel.seoextension::lang.editor.og_type',
+                            'type'    => 'text',
+                            'tab'     => 'SEO',
+                            'span'    => 'right'
+                        ],
+                        'seo_other' => [
+                            'label'   => 'anandpatel.seoextension::lang.editor.other_og_tags',
+                            'type'    => 'textarea',
+                            'size'    => 'large',
+                            'tab'     => 'SEO',
+                        ]
                     ],
                     'secondary');
             }
@@ -259,6 +278,25 @@ class Plugin extends PluginBase
                         'default' => 'follow',
                         'span'    => 'right'
                     ],
+                    'settings[og_image]' => [
+                        'label'   => 'anandpatel.seoextension::lang.editor.og_image',
+                        'type'    => 'mediafinder',
+                        'mode'    => 'image',
+                        'tab'     => 'cms::lang.editor.meta',
+                        'span'    => 'left'
+                    ],
+                    'settings[og_type]' => [
+                        'label'   => 'anandpatel.seoextension::lang.editor.og_type',
+                        'type'    => 'text',
+                        'tab'     => 'cms::lang.editor.meta',
+                        'span'    => 'right'
+                    ],
+                    'settings[seo_other]' => [
+                        'label'   => 'anandpatel.seoextension::lang.editor.other_og_tags',
+                        'type'    => 'textarea',
+                        'size'    => 'large',
+                        'tab'     => 'cms::lang.editor.meta',
+                    ]
                 ],
                 'primary'
             );

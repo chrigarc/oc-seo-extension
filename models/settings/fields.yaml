@@ -32,22 +32,12 @@ tabs:
         prefix: anandpatel.seoextension::lang.settings.tab_settings.title_position_prefix
         suffix: anandpatel.seoextension::lang.settings.tab_settings.title_position_suffix
 
-    content:
-      type: hint
-      path: $/anandpatel/seoextension/models/settings/_other_tags_hint.htm
-      tab: anandpatel.seoextension::lang.settings.tab_settings.label
-
     other_tags:
       label: anandpatel.seoextension::lang.settings.tab_settings.other_tags
       type: codeeditor
       tab: anandpatel.seoextension::lang.settings.tab_settings.label
       commentAbove: anandpatel.seoextension::lang.settings.tab_settings.other_tags_comment_above
       comment: anandpatel.seoextension::lang.settings.tab_settings.other_tags_comment
-
-    og_tags_description:
-      type: hint
-      path: $/anandpatel/seoextension/models/settings/_og_tags_description.htm
-      tab: anandpatel.seoextension::lang.settings.tab_og.label
 
     enable_og_tags:
       label: anandpatel.seoextension::lang.settings.tab_og.og
@@ -61,14 +51,28 @@ tabs:
       comment: anandpatel.seoextension::lang.settings.tab_og.sitename_comment
       tab: anandpatel.seoextension::lang.settings.tab_og.label
 
+    og_image:
+      label: anandpatel.seoextension::lang.settings.tab_og.image
+      mode: image
+      type: mediafinder
+      span: left
+      comment: anandpatel.seoextension::lang.settings.tab_og.og_image_comment
+      tab: anandpatel.seoextension::lang.settings.tab_og.label
+
     og_fb_appid:
       label: anandpatel.seoextension::lang.settings.tab_og.fb
       comment: anandpatel.seoextension::lang.settings.tab_og.fb_comment
       type: text
-      span: left
+      span: right
       tab: anandpatel.seoextension::lang.settings.tab_og.label
 
-
+    seo_other:
+      label: anandpatel.seoextension::lang.settings.tab_og.other_og_tags
+      type: textarea
+      size: large
+      tab: anandpatel.seoextension::lang.settings.tab_og.label
+      commentAbove: anandpatel.seoextension::lang.settings.tab_og.other_og_tags_comment_above
+      comment: anandpatel.seoextension::lang.settings.tab_og.other_og_tags_comment
 
 
 

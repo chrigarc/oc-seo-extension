@@ -2,7 +2,6 @@
     {% placeholder meta default %}
 
     {% endplaceholder %}
-
 {% else %}
 
     {% if __SELF__.redirect_url %}
@@ -15,8 +14,8 @@
 
     {% if __SELF__.seo_description %}
         <meta name="description" content="{{__SELF__.seo_description}}">
+    {% endif %}
 
-{% endif %}
     {% if __SELF__.seo_keywords %}
         <meta name="keywords" content="{{__SELF__.seo_keywords}}">
     {% endif %}
@@ -47,8 +46,24 @@
         <meta property="og:description" content="{{ __SELF__.ogDescription }}" />
     {% endif %}
 
+    {% if __SELF__.ogType %}
+        <meta property="og:type" content="{{ __SELF__.ogType  }}" />
+    {% endif %}
+
+    {% if __SELF__.ogImage %}
+        <meta property="og:image" content="{{ __SELF__.ogImage | media  }}" />
+    {% endif %}
+
     {% if __SELF__.ogFbAppId %}
         <meta property="fb:app_id" content="{{ __SELF__.ogFbAppId  }}" />
+    {% endif %}
+
+    {% if __SELF__.ogOthers %}
+        {{ __SELF__.ogOthers | raw }}
+    {% endif %}
+
+    {% if __SELF__.ogOthersPage %}
+        {{ __SELF__.ogOthersPage | raw }}
     {% endif %}
 
 {% endif %}

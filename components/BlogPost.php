@@ -15,6 +15,7 @@ class BlogPost extends ComponentBase
     public $robot_index;
     public $robot_follow;
 
+
     public function componentDetails()
     {
         return [

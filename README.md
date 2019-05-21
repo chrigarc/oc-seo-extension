@@ -12,6 +12,8 @@ currently included fields:
 * Canonical URL
 * Meta Redirect to other URL
 * Robot Index & Follow
+* Open Graph Image
+* Open Graph types for pages and posts
 
 __*more fields will be added on request__
 
@@ -90,3 +92,6 @@ code of static page layout look like this
 
 ####Configuration
 To configure this Plugin goto Backend *System* then find *My Settings* in left side bar, then click on *SEO Extension* , you will get Configuration options.(refer screenshots)
+
+#### Mont Capital upgrade
+Add Open Graph configuration for custom image and type pages and posts

@@ -80,11 +80,33 @@ class Helper {
                 $ogTags  .= '<meta property="og:description" content="'.$post->seo_description.'" />'."\n" ;
 
             $ogTitle = empty($post->meta_title) ? $post->title : $post->meta_title;
-            $ogUrl = empty($post->canonical_url) ? Request::url() : $this->page->canonical_url ;
+            $ogUrl = empty($post->canonical_url) ? Request::url() : $post->canonical_url ;
 
             $ogTags .= '<meta property="og:title" content="'. $ogTitle .'" />'."\n" ;
 
-            $ogTags .= '<meta property="og:url" content="'. $ogUrl .'" />';
+            $ogTags .= '<meta property="og:url" content="'. $ogUrl .'" />'."\n";
+
+            $ogImage = empty($post->og_image)? $settings->og_image : $post->og_image;
+
+            if($ogImage)
+            {
+                $ogTags .= '<meta property="og:image" content="/storage/app/media'.$ogImage.'"> '."\n";
+            }
+
+            if(!empty($post->og_type))
+            {
+                $ogTags .= '<meta property="og:type" content="'.$post->og_type.'" >'."\n";
+            }
+
+            if(!empty($settings->seo_other))
+            {
+                $ogTags .= $settings->seo_other."\n";
+            }
+
+            if(!empty($post->seo_other))
+            {
+                $ogTags .= $post->seo_other."\n";
+            }
 
             return $ogTags;
         }
